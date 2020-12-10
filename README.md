@@ -87,7 +87,7 @@ Eğer python dosyasını VsCode üzerinden çalıştırıyorsan VsCode' u kapat-
 <br/>
 Şimdi `SPARK_HOME` hatasından da kurtulmuş olman lazım. 
 
-Şimdi istersen Spark' ı `Jupyter Notebook` üzerinden çalıştırabiliriz. Bu işlemi yapabilmek için oluşturduğumuz `env`' yi `Jupyter Notebook` `kernal`' ı olarak `Jupyter Notebook`' a eklemeliyiz.
+Şimdi istersen Spark' ı `Jupyter Notebook` üzerinden çalıştırabiliriz. Bu işlemi yapabilmek için oluşturduğumuz `env`' yi `Jupyter Notebook` `kernel`' ı olarak `Jupyter Notebook`' a eklemeliyiz.
 
 <details>
 <summary>
@@ -96,7 +96,7 @@ Env' yi Kernel olarak kullanma
 </span>
 </summary>
 <br/>
-Oluşturduğumuz `env`' yi `Jupyter Notebook` `kernal`' ı olarak kullanmak için env' ye aşağıdaki modülü kurmamız gerekiyor.
+Oluşturduğumuz `env`' yi `Jupyter Notebook` `kernel`' ı olarak kullanmak için env' ye aşağıdaki modülü kurmamız gerekiyor.
 
 ```
 pip install ipykernel
