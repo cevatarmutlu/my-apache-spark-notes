@@ -108,7 +108,7 @@ Kurulduktan sonra aşağıdaki işlem ile kurduğumuz `env`' yi `Jupyter kernel`
 python -m ipykernel install --user --name ENVNAME
 ```
 
-Bu işlemlerden sonra terminal' e `jupyter-notebook` yazarak oluşturduğumuz `env`' yi `kernel` olarak kullanabiliriz. Yeni oluşturduğumuz `ipbynb` dosyanın kernel' ını seçerken env' mizi görmemiz gerekiyor.
+Bu işlemlerden sonra terminal' e `jupyter-notebook` yazarak oluşturduğumuz `env`' yi `kernel` olarak kullanabiliriz. Yeni `ipbynb` dosyasını oluşturmak için `New` butonuna tıkladığımızda `Notebook` kısmında `env`' mizin adını `--name` parametresine veridiğimiz değerle görmemiz gerekiyor.
 
 </details>
 
