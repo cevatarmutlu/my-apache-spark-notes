@@ -1,43 +1,58 @@
-Umarım Düzenlerim :)
+## Giriş
+
+Apache Spark ile ilgili notlarımı tutacağım.
 
 ## Kurulum
 
-İlk önce Spark' ın kendi sitesindeki Spark' ı indirebileceğim siteye girdim. Pip üzerinden Spark' ı kurabileceğimi gördüm. Bir tane virtualenv oluşturdum ve spark' ı bu env' ye kurdum.
+`Apache Spark` `pip` üzerinden de kurabiliyormuş. Bu bilgiyi öğrendikten sonra aklıma gelen şey bir tane `virtualenv` oluştururum ve Spark' ı o virtualenv üzerinden çalıştırırım oldu. Hem bir sıkıntı olursa oluşturduğum env' yi silerim diye düşündüm.
 
+Apache Spark' ı kurmak için:
 ```
 pip install pyspark
 ```
 
-env aktif olarak terminale pyspark yazında `JAVA_HOME is not set` hatası verdi.
+`virtualenv`' yi aktif ettikten sonra terminale `pyspark` yazarak Spark' ı çalıştırabiliyoruz. İlk olarak çalıştırdığımda `JAVA_HOME is not set` hatası verdi. Bu durumu aşmak için `Java`' yı kurmam gerekiyordu.
 
-VSCode' un java ekleleri sayesinde internetten sanırım OpenJDK11' i indirdim. VsCode' un kendisi java eklentilerini kurduktan sonra JDK var mı yok mu kontrol ediyor eğer yoksa indirmek için bir link veriyor.
+<details>
+<summary>
+<span style="font: 17px bold">Java Kurulumu</span>
+</summary>
+<br/>
 
-jdk indikten sonra inen tar.gz dosyasını çıkardım ve dosyayı. Çıkan dosya şu şekildeydi `OpenJDK11U-jdk_x64_linux_hotspot_11.0.9.1_1` ve içinde `jdk-11.0.9.1+1` adında bir klasör vardı.
+JDK indirdikten sonra inen `tar.gz` dosyasını çıkardım. Çıkan dosya `OpenJDK11U-jdk_x64_linux_hotspot_11.0.9.1_1` adında bir klasördü ve o klasörün içinde ise `jdk-11.0.9.1+1` adında başka bir klasör vardı.
+
+İçteki klasörü `jdk-11` adıyla `/opt/java` klasörünün altına taşıdım.
 
 ```
 sudo mkdir /opt/java
 sudo mv /OpenJDK11U-jdk_x64_linux_hotspot_11.0.9.1_1/jdk-11.0.9.1+1 java/jdk-11
 ```
-olarak taşıdım.
 
-Daha sonra `.bashrc` klasörünün içine aşağıdaki yazdım.
+Taşıma işleminden sonra `.bashrc` dosyasının içine `java` yolunu ekledim.
 
 ```
 JAVA_HOME="/opt/java/jdk-11"
 export PATH="${PATH}:$NODE_HOME/bin:$JAVA_HOME/bin"
 ```
-sonra 
+
+Aktifleştirmek için:
 ```
 source .bashrc
 ```
 
-Bu sayede oluşturduğum env aktifken pyspark yazdığımda spark çalışmıs oldu.
+</details>
 
-Bu haliyle spark terminal üzerinden çalışan bir şey. Onu Python script' i ile çalıştırmayı araştırdım. En kolayı findspark adında bir modül kurmak.
+<br/>
 
-```pip install findspark````
+`Java`' yı kurduktan sonra `env` aktifken `pyspark` yazınca, pyspark çalışmış oldu.
 
-Bir python dosyasının içine aşağıdaki kodları yazdım 
+Bu haliyle Spark sadece terminal üzerinden çalışıyor. Onu Python dosyasını çalıştırarak çalıştırmak için neler yapılabilir araştırdım. En kolay yol `findspark` adında bir modül kurmak.
+
+```
+pip install findspark
+```
+
+Bir python dosyasının içine aşağıdaki kodları yazdım: 
 
 ```python
 import findspark
@@ -45,33 +60,57 @@ import pyspark
 findspark.init()
 sc = pyspark.SparkContext()
 ```
+Yukarıdaki kod sorunsuz çalışırsa `pyspark`' ı Python dosyası içine yazarak çalıştırabiliyorum demektir. Oluşturduğum Python dosyasını çalıştırdım. `SPARK_HOME` olmadığı için hata verdi.
 
-oluşturduğum env' nin yorumluyucusu ile bu python dosyasını çalıştırdım. `SPARK_HOME` dan dolayı hata verdi.
 
-Onun için ise `.bashrc` dosyasına
+<details>
+<summary>
+<span style="font: 17px bold">SPARK_HOME</span>
+</summary>
+<br/>
+Bu işlem için ise `.bashrc` dosyasının içine aşağıdaki kısmı ekledim.
 
 ```bash
 export SPARK_HOME="env_yolu/env_adı/lib/python3.8/site-packages/pyspark"
 ```
 
+Bu yol oluşturduğum `env` içindeki `pyspark`' ın dosya yolu.
+
+Yukarıdaki işlemi yaptıktan sonra:
 ```
 source .bashrc
 ```
 
-sonra eğer python dosyasını vscode üzerinden çalıştırıyorsan vscode' u kapat aç ya da terminal üzerinden çalışıyorsan terminali kapat ve env' yi tekrar aktifleştir ve python dosyasını tekrar çalıştır. Çalışacaktır.
+Eğer python dosyasını VsCode üzerinden çalıştırıyorsan VsCode' u kapat-aç ya da terminal üzerinden çalışıyorsan terminali kapat ve env' yi tekrar aktifleştir. Şimdi Python dosyasını tekrar çalıştır.
 
-Şimdi jupyter notebook üzerindende çalıştırmayı deniyelim.
+</details>
+<br/>
+Şimdi `SPARK_HOME` hatasından da kurtulmuş olman lazım. 
 
-env' ye
+Şimdi istersen Spark' ı `Jupyter Notebook` üzerinden çalıştırabiliriz. Bu işlemi yapabilmek için oluşturduğumuz `env`' yi `Jupyter Notebook` `kernal`' ı olarak `Jupyter Notebook`' a eklemeliyiz.
+
+<details>
+<summary>
+<span style="font: 17px bold">
+Env' yi Kernel olarak kullanma
+</span>
+</summary>
+<br/>
+Oluşturduğumuz `env`' yi `Jupyter Notebook` `kernal`' ı olarak kullanmak için env' ye aşağıdaki modülü kurmamız gerekiyor.
 
 ```
 pip install ipykernel
 ```
 
-sonra 
+Kurulduktan sonra aşağıdaki işlem ile kurduğumuz `env`' yi `Jupyter kernel`' ı olarak kullanabileceğiz.
   
 ```
 python -m ipykernel install --user --name ENVNAME
 ```
 
-sonra env' yi deaktif et. Terminal' e jupyter-notebook yaz ve oluşturduğun env adı ile yeni bir ipbynb dosyası oluşturabiliyorsun.
+Bu işlemlerden sonra terminal' e `jupyter-notebook` yazarak oluşturduğumuz `env`' yi `kernel` olarak kullanabiliriz. Yeni oluşturduğumuz `ipbynb` dosyanın kernel' ını seçerken env' mizi görmemiz gerekiyor.
+
+</details>
+
+<br/>
+Şimdi `Spark`' ı başarılı bir şekilde kurmuş olman gerekiyor. Kolay gelsin.
