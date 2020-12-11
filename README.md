@@ -42,8 +42,9 @@ source .bashrc
 
 </details>
 
-<br/>
+ ---
 
+<br/>
 `Java`' yı kurduktan sonra `env` aktifken `pyspark` yazınca, pyspark çalışmış oldu.
 
 Bu haliyle Spark sadece terminal üzerinden çalışıyor. Onu Python dosyasını çalıştırarak çalıştırmak için neler yapılabilir araştırdım. En kolay yol `findspark` adında bir modül kurmak.
@@ -61,7 +62,6 @@ findspark.init()
 sc = pyspark.SparkContext()
 ```
 Yukarıdaki kod sorunsuz çalışırsa `pyspark`' ı Python dosyası içine yazarak çalıştırabiliyorum demektir. Oluşturduğum Python dosyasını çalıştırdım. `SPARK_HOME` olmadığı için hata verdi.
-
 
 <details>
 <summary>
@@ -84,6 +84,9 @@ source .bashrc
 Eğer python dosyasını VsCode üzerinden çalıştırıyorsan VsCode' u kapat-aç ya da terminal üzerinden çalışıyorsan terminali kapat ve env' yi tekrar aktifleştir. Şimdi Python dosyasını tekrar çalıştır.
 
 </details>
+
+---
+
 <br/>
 Şimdi `SPARK_HOME` hatasından da kurtulmuş olman lazım. 
 
@@ -96,7 +99,8 @@ Env' yi Kernel olarak kullanma
 </span>
 </summary>
 <br/>
-Oluşturduğumuz `env`' yi `Jupyter Notebook` `kernel`' ı olarak kullanmak için env' ye aşağıdaki modülü kurmamız gerekiyor.
+
+Oluşturduğumuz `env` ' yi `Jupyter Notebook` `kernel`' ı olarak kullanmak için env' ye aşağıdaki modülü kurmamız gerekiyor.
 
 ```
 pip install ipykernel
@@ -112,5 +116,8 @@ Bu işlemlerden sonra terminal' e `jupyter-notebook` yazarak oluşturduğumuz `e
 
 </details>
 
+---
+
 <br/>
+
 Şimdi `Spark`' ı başarılı bir şekilde kurmuş olman gerekiyor. Kolay gelsin.
