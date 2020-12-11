@@ -12,14 +12,14 @@ Bu yazıyı benden başka okuyanlar için;
 
 İlk [kaynak][1] olarak Amine YEŞİLYURT tarafından yazılan medium yazısını okudum. Dünyaya yabancı olduğumdan diye tahmin ediyorum yazılanların çoğunu anlamadım. 
 
-Hanımefendinin yazıklarına kendim anladığım şekilde bir şeyler ekledimeye çalıştım ve anlamadığım şeyleri belirttim.
+Hanımefendinin yazıklarına kendim anladığım şekilde bir şeyler eklemeye çalıştım ve anlamadığım şeyleri belirttim.
 
 [1]: (https://medium.com/@amine.yesilyurt/apache-spark-nedir-sparka-giri%C5%9F-582d2e0059af)
 
 <br/>
 <br/>
 
-## Apache Spark
+### Apache Spark
 
 Apache Spark büyük *veri işleme*(?) motorudur. Büyük veriler üzerinde paralel işlem yapmaya yarar. Açık kaynak kodludur. Scala dili ile geliştirilmiştir. Hadoop' tan 100 kat daha hızlı olduğu iddia edilir.
 
@@ -34,7 +34,7 @@ Scala, Python, Java, SQL, R desteği vardır.
 <br/>
 <br/>
 
-## Ne zaman Spark’ı kullanırız?
+### Ne zaman Spark’ı kullanırız?
 
 <br/>
 
@@ -57,7 +57,7 @@ __Gerçek zamanlı veri işleme (veya streaming)__: Düşük gecikme süresi ve 
 <br/>
 <br/>
 
-## Apache Spark Ekosistemi
+### Apache Spark Ekosistemi
 
 <br/>
 
