@@ -16,6 +16,9 @@ Hanımefendinin yazıklarına kendim anladığım şekilde bir şeyler ekledimey
 
 [1]: (https://medium.com/@amine.yesilyurt/apache-spark-nedir-sparka-giri%C5%9F-582d2e0059af)
 
+<br/>
+<br/>
+
 ## Apache Spark
 
 Apache Spark büyük *veri işleme*(?) motorudur. Büyük veriler üzerinde paralel işlem yapmaya yarar. Açık kaynak kodludur. Scala dili ile geliştirilmiştir. Hadoop' tan 100 kat daha hızlı olduğu iddia edilir.
