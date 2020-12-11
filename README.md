@@ -45,6 +45,7 @@ source .bashrc
  ---
 
 <br/>
+
 `Java`' yı kurduktan sonra `env` aktifken `pyspark` yazınca, pyspark çalışmış oldu.
 
 Bu haliyle Spark sadece terminal üzerinden çalışıyor. Onu Python dosyasını çalıştırarak çalıştırmak için neler yapılabilir araştırdım. En kolay yol `findspark` adında bir modül kurmak.
@@ -61,6 +62,7 @@ import pyspark
 findspark.init()
 sc = pyspark.SparkContext()
 ```
+
 Yukarıdaki kod sorunsuz çalışırsa `pyspark`' ı Python dosyası içine yazarak çalıştırabiliyorum demektir. Oluşturduğum Python dosyasını çalıştırdım. `SPARK_HOME` olmadığı için hata verdi.
 
 <details>
