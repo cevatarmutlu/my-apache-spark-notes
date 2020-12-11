@@ -70,6 +70,7 @@ Yukarıdaki kod sorunsuz çalışırsa `pyspark`' ı Python dosyası içine yaza
 <span style="font: 17px bold">SPARK_HOME</span>
 </summary>
 <br/>
+
 Bu işlem için ise `.bashrc` dosyasının içine aşağıdaki kısmı ekledim.
 
 ```bash
@@ -90,6 +91,7 @@ Eğer python dosyasını VsCode üzerinden çalıştırıyorsan VsCode' u kapat-
 ---
 
 <br/>
+
 Şimdi `SPARK_HOME` hatasından da kurtulmuş olman lazım. 
 
 Şimdi istersen Spark' ı `Jupyter Notebook` üzerinden çalıştırabiliriz. Bu işlemi yapabilmek için oluşturduğumuz `env`' yi `Jupyter Notebook` `kernel`' ı olarak `Jupyter Notebook`' a eklemeliyiz.
