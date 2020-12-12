@@ -17,7 +17,7 @@ Bu yazıyı benden başka okuyanlar için;
 
 Hanımefendinin yazıklarına kendim anladığım şekilde bir şeyler eklemeye çalıştım ve anlamadığım şeyleri belirttim.
 
-![1]: (https://medium.com/@amine.yesilyurt/apache-spark-nedir-sparka-giri%C5%9F-582d2e0059af)
+[1]: https://medium.com/@amine.yesilyurt/apache-spark-nedir-sparka-giri%C5%9F-582d2e0059af
 
 <br/>
 <br/>
@@ -96,7 +96,7 @@ Spark' ın rakipleri Hadoop, Kafka, Apex, Cloudera.
 Yazısında bazı yerleri doğrudan aldım. Bazı yerleri ise biraz değiştirerek yazdım.
 
 
-![2](https://ozgununlu.com/blog-detay/apache-spark-nedir)
+[2]: https://ozgununlu.com/blog-detay/apache-spark-nedir
 
 <br/>
 <br/>
