@@ -1,5 +1,7 @@
 ## Açıklama
 
+Aşağıdaki yazılar bana ait değildir. Yazıların kaynakları gerekli başlıkta yazanların isimleri de anılarak verilmiştir.
+
 Bu yazıyı benden başka okuyanlar için;
 
 *İtalik*(?) bu şekildeki ifadeler ne demek istendiğini bilmediğim, bende tam olarak bir karşılığı olmayan şeylerdir. Bu bilmediğim şeyleri hızlı bir şekilde öğrenmeye çalışmayacağım. İlk önce dünyaya alışmak istiyorum. Alışma süreci sırasında kendi kendine zaten bu soruların cevaplarını bulabileceğimi düşünüyorum. Ek olarak bunun daha doğru bir öğrenme süreci olduğunu düşünmekteyim.
@@ -8,13 +10,14 @@ Bu yazıyı benden başka okuyanlar için;
 <br/>
 <br/>
 
+
 ## Kaynak 1
 
 İlk [kaynak][1] olarak Amine YEŞİLYURT tarafından yazılan medium yazısını okudum. Dünyaya yabancı olduğumdan diye tahmin ediyorum yazılanların çoğunu anlamadım. 
 
 Hanımefendinin yazıklarına kendim anladığım şekilde bir şeyler eklemeye çalıştım ve anlamadığım şeyleri belirttim.
 
-[1]: (https://medium.com/@amine.yesilyurt/apache-spark-nedir-sparka-giri%C5%9F-582d2e0059af)
+![1]: (https://medium.com/@amine.yesilyurt/apache-spark-nedir-sparka-giri%C5%9F-582d2e0059af)
 
 <br/>
 <br/>
@@ -80,3 +83,92 @@ __MLlib(Machine Learning)__: *Aksiyon almaya yarayan öngörüler*(?) elde etmek
 __Grafik Hesaplama (GraphX)__: GraphX Spark’ın üzerinde bulunan *grafik hesaplama*(?) motorudur. Kullanıcılara etkileşimli graph yapısında çıktı oluşturmasına olanak sağlar. [Pythondaki Scikit Learn gibi sanırım]
 
 Spark' ın rakipleri Hadoop, Kafka, Apex, Cloudera.
+
+
+<br/>
+<br/>
+
+
+## Kaynak 2
+
+İkinci [kaynak][2] olarak Özgün ÜNLÜ' nün bu güzel yazısını okudum. Hâlâ anlamadığım çok şey olsada bir çok şeyi öğrenmemi sağlamıştır. Gerçekten güzel bir yazı olmuş.
+
+Yazısında bazı yerleri doğrudan aldım. Bazı yerleri ise biraz değiştirerek yazdım.
+
+
+![2](https://ozgununlu.com/blog-detay/apache-spark-nedir)
+
+<br/>
+<br/>
+
+### Apache Spark Nedir?
+
+Büyük veriyi işlemek amacıyla ortaya çıkmıştır. Apache Spark; *Directed Acyclic Graph*(?) motoruna sahiptir.
+
+Apache Spark; yapay öğrenme algoritmalarının dağıtık implementasyonu konusunda Hadoop'a kıyasla çok daha iyi performans vermektedir.
+
+Apache Spark' ın Hadoop' un doğrudan bir alternatifi olduğunu söylemek doğru olmazmış. Apache Spark, Hadoop' un eksik kaldığı yerlerde tamamlayıcı görevinde kullanıldığını söylemek daha doğru olurmuş.
+
+Hadoop, binlerce sunucuda bulunan petabyte' larca veriyi saklayıp işleyecek şekilde tasarlanmıştır. Apache Spark ise Hadoop' a kısayla daha az veriyi in-memory şekilde işlemek ve Hadoop' tan daha hızlı netice almak için tasarlanmış.
+
+Spark; Hadoop'a kıyasla HDFS gibi bir *storage çözümü*(?) sunmaz. Ancak, Spark sayesinde HDFS üzerinden okuma yapmak mümkün hale gelir.
+
+<br/>
+
+### Hadoop ve Apache Spark Arasındaki Farklar ve Benzerlikler
+
+Her ikiside büyük veriyi işler.
+
+Hadoop veriyi işler ve kaydeder. Verilerin saklanması için HDFS, işlenmesi için MapReduce sistemini kullanır.
+
+Apache Spark ise sadece veriyi işler, kaydetmez. Kendisine ait dosya yönetim sistemi ve veri depolama aracı bulunmaz. Bu sebepten dolayı, Spark'ın HDFS veya farklı bir bulut tabanlı veri platformuyla entegre edilmesi şarttır.
+
+*Hadoop, başka makinelere gerek duymaksızın büyük verilerin saklanabileceği HDFS yapısını bulundurmaktadır.*(?)
+
+Spark, veriyi RAM'de işler(sanırım in-memory bu demek). Hadoop ise bundan farklı olarak MapReduce yapısı sayesinde veriyi diskte tutarak işler. Bu özelliğinden dolayı, Spark'ın Hadoop'tan tam 100 kat daha hızlı olduğu iddia edilmektedir. Ancak, bu iddianın duruma göre değişebileceğini söylemek gerekir.
+
+Spark; belleğe sığmayan verileri işlemek amacıyla diskte kullanmaktadır. Bu durumda, elde edilen veri kümesinin hali hazırdaki RAM'den daha büyük olması durumunda Hadoop MapReduce, Spark'a kıyasla daha hızlı olabilir.
+
+Apache Spark'ın bunlar dışında da farklı avantajları söz konusudur. Apache Spark içerisinde Spark Streaming bulunur. Bu sayede, Spark, yakın gerçek zamanlı veri işleme için de kullanılmaktadır. Özellikle, sosyal medya sitelerinden elde edilen verilerin gerçek zamanlı olarak analitiğinin yapılmasında Spark'ın bu özelliği işe yarar. 
+
+Hadoop MapReduce ise Spark'tan farklı olarak var olan verileri işlemek amacıyla ortaya çıkmıştır.
+
+<br/>
+
+### Apache Spark'ın Özellikleri
+
+RDD ismindeki *yüksek seviyeli bir operatöre*(?) sahiptir. RDD sayesinde *yapısal olmayan datalar*(sanırım unstructured data) ile süreklilik gösteren işlemleri yapmak daha kolay hale gelir. 
+
+Spark; makine öğrenmesi uygulamaları geliştirmek adına MLib kütüphanesi sunmaktadır. 
+
+GraphX kütüphanesi sayesinde graph tabanlı hesaplamalar yapmak mümkündür. 
+
+Spark SQL adında SQL diline çok benzeyen bir sorgu diline sahiptir. 
+
+Hadoop'a kıyasla birden çok veri kümesinin birleştirilmesi gereken yerlerde çok daha hızlı bir şekilde join işlemi gerçekleştirebilir. 
+
+Spark, çalıştığı sırada ortaya çıkan bir hatayı rahatlıkla telafi edebilir. Arıza durumunda Spark uygulamasının en baştan başlatılmasına gerek yoktur. 
+
+Spark, güvenlik konusunda da Hadoop'a kıyasla daha avantajlıdır. Spark'ta Shared Secret sistemi vardır. Bu sistem, kimlik doğrulama sistemi sayesinde her iki tarafın da gizliliğinin korunmasını sağlar.
+
+<br/>
+
+### Apache Spark mı Yoksa Hadoop mu Seçilmelidir?
+
+Spark'ın avantajları hızlı performans, *sürekli işlemlerde*(?) kolaylık, grafik işleme, gerçek zamanlı analiz, makine öğrenimi bulunmaktadır. 
+
+Projesinde bütünlüğe sahip bir dosya sistemine ihtiyacı olanların aynı zamanda büyük boyutlu veri setleriyle çalışanların Hadoop kullanması daha mantıklı olacaktır. 
+
+Veri güvenliğini ön planda tutanlar ve gerçek zamanlı bir uygulama geliştirmeyecek olanlar için de Hadoop öncelikli olmalıdır. 
+
+Gerçek zamanlı işlemler yapmak isteyenler, bunun yanı sıra işlediği verileri saklamak isteyenler için HDFS kullanımında her iki teknolojiden de faydalanmak mümkün olacaktır. [Anlamadım. Yukarıda gerçek zamanlı uygulama geliştirmeyecek olanların Hadoop seçmesi daha iyi olur diyor ama burada ise HDFS kullanımında her ikisi de gerçek zamanlı uygulamalarda kullanılabilir diyor.]
+
+<br/>
+
+### Apache Spark Ne İşe Yarar?
+
+*Import ve export transform*(?) konusunda Spark'ın en önemli ortam olması, ciddi bir avantaj teşkil etmektedir. 
+
+Buna ek olarak, Apache Spark; *sürekli işlem*(?)lerde yüksek performans verir. 
+
+Spark'ın *Hive*(?) ve HDFS ile native entegrasyonu bulunmaktadır. 
