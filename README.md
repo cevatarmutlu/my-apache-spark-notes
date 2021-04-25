@@ -6,3 +6,7 @@ Apache Spark ile ilgili notlarımı tutacağım.
 
 
 Scala kullanmaya karar verdim. Jupyter notebook ile bu işlemleri yapabiliyormuşuz.
+
+## Linkler
+
+[PySpark ile PostgreSQL' den veri çekme ve veri yazma](jupyter-notebooks/pySparkPostgreSQL.ipynb)
