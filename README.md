@@ -10,3 +10,5 @@ Scala kullanmaya karar verdim. Jupyter notebook ile bu işlemleri yapabiliyormu�
 ## Linkler
 
 [PySpark ile PostgreSQL' den veri çekme ve veri yazma](jupyter-notebooks/pySparkPostgreSQL.ipynb)
+
+[PySpark ile JSON okuma ve yazma](jupyter-notebooks/pySparkJSON.ipynb)
