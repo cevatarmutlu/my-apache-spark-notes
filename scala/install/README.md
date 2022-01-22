@@ -1,3 +1,5 @@
+## Güncellenmeli. Çok kötü
+
 Unutmamak için buraya not alıyorum.
 
 sudo apt-get install scala
