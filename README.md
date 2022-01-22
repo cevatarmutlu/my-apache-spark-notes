@@ -5,7 +5,9 @@ Merhabar. Bu repoda Apache Spark notlarım bulunmaktadır. Ağırlık olarak Sca
 > Python kısmı eskidir. Scala ile devam etmeye karar verdim.
 
 * [Scala](scala)
-    * [ScalaSpark kurulumu](scala/install)
+    * [install](scala/install)
+    * [doc](scala/doc)
+    * [code](scala/code)
 * [Python](python)
     * [install](python/install)
     * [doc](python/code)
@@ -17,13 +19,3 @@ Merhabar. Bu repoda Apache Spark notlarım bulunmaktadır. Ağırlık olarak Sca
         * [JSON: read and write](python/code/pySparkJSON.ipynb)
         * [PostgreSQL: read and write](python/code/pySparkPostgreSQL.ipynb)
         * [CSV: read](python/code/csvFile.ipynb)
-
-
-
-## Linkler
-
-[PySpark ile PostgreSQL' den veri çekme ve veri yazma](jupyter-notebooks/pySparkPostgreSQL.ipynb)
-
-[PySpark ile JSON okuma ve yazma](jupyter-notebooks/pySparkJSON.ipynb)
-
-[PySpark ile DataFrame ve DataFrame işlemleri](jupyter-notebooks/PySparkDataFrame.ipynb)
