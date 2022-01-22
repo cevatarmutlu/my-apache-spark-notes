@@ -16,6 +16,7 @@ code    | Belirli işlemler: JSON okuma, yazma gibi
 
 * [Scala](scala)
     * [install](scala/install)
+        * [Jupyter notebook' ta Scala yazma: Başka kaynak](https://medium.com/@bogdan.cojocar/how-to-run-scala-and-spark-in-the-jupyter-notebook-328a80090b3b)
     * [doc](scala/doc)
     * [code](scala/code)
 * [Python](python)
