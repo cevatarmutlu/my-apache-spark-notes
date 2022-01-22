@@ -6,27 +6,27 @@ Bu belgenin hazırlandığı tarihte `Scala3` ve `Scala2` bulunmaktaydı. Ve yin
 
 ### Adım 1: Java kurulumu
 
-Scala' nı download sayfasına giderek Scala2' yi seçin. Açılan sayfada ilk önce Java8 ya da Java11' in kurulu olduğundan emin olunmasını istiyor. Bunun için:
+Scala' nın download sayfasına giderek `Scala2`' yi seçin. Açılan sayfada ilk önce `Java8` ya da `Java11`' in kurulu bilgisayarınızda kurulu olduğundan emin olunmasını istiyor. Bunun için:
 
     java -version
 
-Eğer bu komuttan şöyle bir çıktı gelmeli:
+Bu komuttan şöyle bir çıktı gelmeli:
 
     openjdk version "1.8.0_312"
     OpenJDK Runtime Environment (build 1.8.0_312-8u312-b07-0ubuntu1~20.04-b07)
     OpenJDK 64-Bit Server VM (build 25.312-b07, mixed mode)
 
-İlk satırdaki 1.8 ifadesi Java11 için farklı olabilir.
+İlk satırdaki `1.8` ifadesi `Java11` için farklı olabilir.
 
-Eğer `-version` ifadesinden hata alıyorsanız Java8 kurmak için:
+Eğer `-version` ifadesinden hata alıyorsanız `Java8` kurmak için:
 
     sudo apt install openjdk-8-jdk -y
 
-### Adım 2: IDE' mı SBT' mı
+### Adım 2: IDE mi? SBT mi?
 
-Scala2 download sayfasındaki birinci adım olan Java kontrolünden sonra ikinci adımda Scala' yı iki şekilde kurabileceğimizden bahsediliyor. İlki IDE üzerinden ikincisi sbt(Scala's build tool) üzerinden. IDE üzerinden kurmak daha kolay. İsterseniz IDE üzerinden kurabilirsiniz. Ben sbt üzerinden kuracağım.
+`Scala2` download sayfasındaki birinci adım olan `Java` kontrolünden sonra ikinci adımda `Scala`' yı iki şekilde kurabileceğimizden bahsediliyor. İlki `IDE` üzerinden ikincisi `sbt(Scala's build tool)` üzerinden. `IDE` üzerinden kurmak daha kolay olduğu için isterseniz `IDE` üzerinden kurabilirsiniz. Ben `sbt` üzerinden kuracağım.
 
-`Download SBT` butonuna basın ve bu butonun altındaki `GETTING STARTED WITH SCALA AND SBT ON THE COMMAND LINE` ifadesini ayrı tab' ta açın çünkü o linkte basit bir Scala örneği anlatılıyor.
+`Download SBT` butonuna basın ve bu butonun altındaki `GETTING STARTED WITH SCALA AND SBT ON THE COMMAND LINE` linkini ayrı tab' ta açın çünkü o linkte basit bir `Scala` örneği üzerinden `Scala`' nın klasör yapısından, hangi dosyanın ne işe yaradığından bahsediyor.
 
 
 ### Adım 3: Scala kurulumu
@@ -36,7 +36,7 @@ Scala2 download sayfasındaki birinci adım olan Java kontrolünden sonra ikinci
 Bu kopyala ve terminale yapıştır işlemi bittikten sonra kurulum tamamlanmıştır.
 
 
-### Adım 4: Basit bir Scala öğreneği
+### Adım 4: Basit bir Scala örneği
 
 Downlaod sayfasındaki `GETTING STARTED WITH SCALA AND SBT ON THE COMMAND LINE` linkindeki tab' a geçerseniz `Create the project` ve altındaki kısımları inceliyerek proje oluşturma vb gibi işlemleri görebilirsiniz.
 
