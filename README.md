@@ -1,8 +1,16 @@
 ## Giriş
 
-Merhabar. Bu repoda Apache Spark notlarım bulunmaktadır. Ağırlık olarak Scala ile yazmayı düşünüyor lakin PySpark ile ilgili bir takım notlarda bulunmaktadır.
+Merhabar. Bu repoda Apache Spark notlarım bulunmaktadır. Ağırlık olarak Scala ile yazmayı düşünüyorum lakin PySpark ile ilgili bir takım notlarda bulunmaktadır.
 
 > Python kısmı eskidir. Scala ile devam etmeye karar verdim.
+
+## Klasör isimleri ve barındırdıkları
+
+klasör  | açıklama
+------  | --------
+install | Kurulumlar
+doc     | Okuduğum dökümanlar
+code    | Belirli işlemler: JSON okuma, yazma gibi 
 
 * [Scala](scala)
     * [install](scala/install)
