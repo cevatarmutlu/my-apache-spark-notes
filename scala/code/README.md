@@ -5,4 +5,4 @@ code klasörünün içinde belirli işlemlerin nasıl yapıldığı yer alacakt�
 
 ## Linkler
 
-* [Read and Write: JSON](scala/code/read_write_json.ipynb)
+* [Read and Write: JSON](read_write_json.ipynb)
