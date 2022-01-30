@@ -22,6 +22,7 @@ code    | Belirli işlemler: JSON okuma, yazma gibi
         * [SparkDoc: RDD Programming Guide](scala/doc/scala_doc_2_RDD.ipynb)
     * [code](scala/code)
         * [Read and Write: JSON](scala/code/read_write_json.ipynb)
+        * [Read and Write: CSV](scala/code/read_write_csv.ipynb)
 * [Python](python)
     * [install](python/install)
     * [doc](python/code)
